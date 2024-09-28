@@ -1,0 +1,23 @@
+import React from 'react';
+
+function ContactCard(props) {
+  const {id,name,email}=props.contact;
+  return (
+    <div className='item'>
+      <img className='ui avatar image' src='data:image/png;base64,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' alt='user'/>
+        <div className='content'>
+          <div className='header'>{name}</div>
+          <div>{email}</div>
+        </div>
+        <i className='trash alternate outline icon'
+        style={{display:'flex',color:'blue',position:'relative',
+          left:'1020px',
+          top:'-13px',
+          cursor:'pointer'
+        }}
+        onClick={()=>{props.clickHandler(id)}}></i>
+      </div>
+  )
+}
+
+export default ContactCard
